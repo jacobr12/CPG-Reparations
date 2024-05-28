@@ -547,7 +547,8 @@ a {
     width: auto;
     border: none;
     display: block;
-    outline: 0
+    outline: 0;
+    color: rgb(71, 67, 67);
 }
 
 .w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click {
@@ -1791,3 +1792,4 @@ a {
 .w3-border-pale-blue,.w3-hover-border-pale-blue:hover {
     border-color: #e7ffff!important
 }
+

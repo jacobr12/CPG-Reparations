@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Reparations Policy for the City of East Palo Alto
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="https://www.cardinalpolicygroup.com/" target="_blank">Cardinal Policy Group</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+          <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="home.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="team.html" class="w3-bar-item w3-button w3-hide-small">TEAM</a>
+          <a href="timeline.html" class="w3-bar-item w3-button w3-hide-small">TIMELINE</a>
+          <a href="https://www.cardinalpolicygroup.com/" class="w3-bar-item w3-button w3-hide-small">CARDINAL POLICY GROUP</a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"></a>
+        </div>
+    </div>
     <main>
         <section class="timeline">
             <div class="timeline-event" data-title="Opening of Ravenswood High School" data-content=" Ravenswood High School opened with 629 students. Over the few years, the student population became more and more African American as a result of blockbusting practices in East Palo Alto and white flight. White families began moving their kids to other schools in the district, and more African American families began moving into the town.">
@@ -52,5 +52,20 @@
     </div>
 
     <script src="script.js"></script>
+
+
+    <script>
+
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+        </script>
+        
 </body>
 </html>

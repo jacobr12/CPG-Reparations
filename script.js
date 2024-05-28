@@ -1,17 +1,29 @@
-window.onscroll = function() {myFunction()};
+document.addEventListener('DOMContentLoaded', function() {
+    var events = document.querySelectorAll('.timeline-event');
+    var modal = document.getElementById('popup-modal');
+    var modalTitle = document.getElementById('modal-title');
+    var modalContent = document.getElementById('modal-content');
+    var closeButton = document.querySelector('.close-button');
 
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    var navbarItems = document.querySelectorAll('.w3-bar .w3-bar-item');
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.classList.add('scrolled');
-        navbarItems.forEach(item => {
-            item.classList.add('scrolled');
+    events.forEach(function(event) {
+        event.addEventListener('click', function() {
+            var title = event.getAttribute('data-title');
+            var content = event.getAttribute('data-content');
+            modalTitle.textContent = title;
+            modalContent.textContent = content;
+            modal.style.display = 'block';
         });
-    } else {
-        navbar.classList.remove('scrolled');
-        navbarItems.forEach(item => {
-            item.classList.remove('scrolled');
-        });
-    }
-}
+    });
+
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+
