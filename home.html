@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cardinal Policy Group</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="new.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bgimg-1 {
+  background-image: url('GroupPhoto.png');
+  height: 100vh; /* Ensure the element is as tall as the viewport */
+  background-size: cover; /* Ensure the background image covers the entire element */
+}
+
+
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="home.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="team.html" class="w3-bar-item w3-button w3-hide-small">TEAM</a>
+      <a href="timeline.html" class="w3-bar-item w3-button w3-hide-small">TIMELINE</a>
+      <a href="https://www.cardinalpolicygroup.com/" class="w3-bar-item w3-button w3-hide-small">CARDINAL POLICY GROUP</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"></a>
+    </div>
+
+
+</div>
+
+
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Reparations <span class="w3-hide-small">Policy</span> for the City of East Palo Alto
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <p>In collaboration with the City of East Palo Alto and EPA4Reparations, this partnership with the Cardinal Policy Group (CPG) will examine the historical injustices experienced by Descendant Americans – African Americans who are a descendent of a free Black person living in the US prior to the 19th century – in East Palo Alto, focusing on housing practices, the impact of neighboring cities and Stanford University, demographic analysis, and case studies. .</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="CPGlogo.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off">
+      <img src="EPAlogo.webp" class="w3-round w3-image w3-opacity w3-hover-opacity-off">
+    </div>
+
+   
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>For most of its history, East Palo Alto was part of unincorporated San Mateo County. As such, it did not have an official boundary until it was incorporated in 1983. However, the area historically regarded as East Palo Alto was much larger than the city's current 2.5 square miles. The original inhabitants were Ohlone / Costanoan Native Americans. Spanish ranchers took over, followed by Caucasian speculators and settlers. For a time Chinese laborers were prevalent. Asian and Italian flower growers preceded the flood of middle-class Caucasians drawn to post-war housing developments. East Palo Alto later became the largest African American community on the peninsula. Today the city possesses a multi-ethnic population which includes a large number of Hispanics and Pacific Islanders.
+        EPA4Reparations represents a historically marginalized community grappling with systemic challenges. As Stanford students, we must acknowledge our privilege—being afforded the opportunity to engage in this project and being part of an institution that has contributed to a multitude of systemic barriers. We must recognize that our understanding of the lived experiences of the EPA4Reparations community may be limited. So, self-education, striving to bridge gaps in our awareness and acknowledging potential biases inherent in our perspectives is necessary. Our goal is to primarily amplify the voices of those we support and adapt our approach based on feedback and an evolving comprehension of the community's needs.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<footer>
+    <p>&copy; 2024 Cardinal Policy Group</p>
+</footer>
+ 
+<script>
+
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+</script>
+
+</body>
+</html>
