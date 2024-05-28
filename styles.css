@@ -9,6 +9,12 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+title {
+    font-family: TT Ricordi Greto ;
+    font-size: 100px;
 }
 
 main {
@@ -1524,6 +1530,7 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    width : 100%
 }
 
 nav ul {
@@ -1572,11 +1579,12 @@ footer {
     left: 0;
 }
 
-
 .team {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .team-member {
@@ -1588,13 +1596,14 @@ footer {
     padding: 1rem;
     display: flex;
     align-items: center;
-    width: 600px;
+    width: 300px; /* Adjust width to fit multiple on the same row */
+    box-sizing: border-box;
 }
 
 .team-member img {
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     object-fit: cover;
     margin-right: 1rem;
 }
@@ -1602,17 +1611,25 @@ footer {
 .team-info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    text-align: left; /* Align text to the left */
 }
 
 .team-info h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
 }
 
-.team-info p {
-    color: #555;
-    margin: 0.2rem 0;
+.team-info i {
+    font-size: 0.9rem;
+    color: #555
 }
+
+.spacer {
+    height: 45px; 
+    width: 100%; 
+}
+
 
 .timeline {
     position: relative;
