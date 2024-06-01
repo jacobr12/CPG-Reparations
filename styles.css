@@ -1777,6 +1777,18 @@ footer {
     margin-bottom: 1rem;
 }
 
+.local {
+    background-color: #f28b82; 
+}
+
+.state {
+    background-color: #ac453b; 
+}
+
+.federal {
+    background-color: #ec2412; 
+}
+
 /* Style for the source link inside the modal */
 .modal-source {
     margin-top: 1rem;
@@ -1785,4 +1797,50 @@ footer {
     text-decoration: underline;
     cursor: pointer;
 }
+.legend {
+    position: absolute;
+    top: 120px; /* Adjust to position legend initially */
+    left: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend.fixed {
+    position: fixed;
+    top: 40px; /* Adjust to position legend after scroll */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+
+.category-1-color {
+    background-color: #f28b82;
+}
+
+.category-2-color {
+    background-color: #ac453b;
+}
+
+.category-3-color {
+    background-color: #ec2412;
+}
+
+
 
